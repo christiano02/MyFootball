@@ -2,15 +2,16 @@ package org.example.myfootball.models;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.ObservableList;
+import javafx.collections.FXCollections;
 
 public class Team {
 
     private final SimpleStringProperty name;
     private final ObservableList <Player> players;
 
-    public Team(SimpleStringProperty name, ObservableList<Player> players) {
-        this.name = name;
-        this.players = players;
+    public Team(String name) {
+        this.name = new SimpleStringProperty(name);
+        this.players = FXCollections.observableArrayList();
     }
     //GETTERS
     public String getName() {

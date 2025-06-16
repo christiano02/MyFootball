@@ -9,10 +9,10 @@ public class Player {
     private final SimpleStringProperty position;
     private final SimpleIntegerProperty power;
 
-    public Player(SimpleStringProperty name, SimpleStringProperty position, SimpleIntegerProperty power) {
-        this.name = name;
-        this.position = position;
-        this.power = power;
+    public Player(String name, String position, int power) {
+        this.name = new SimpleStringProperty(name);
+        this.position = new SimpleStringProperty(position);
+        this.power = new SimpleIntegerProperty(power);
     }
 
     public String getName() {
