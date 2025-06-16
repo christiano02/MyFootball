@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.myfootball.MainApplication"
+            prefHeight="400.0" prefWidth="600.0">
+    <TableView fx:id="tableviewTeamA" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+        <columns>
+            <TableColumn fx:id="columnIdA" text="#"/>
+            <TableColumn fx:id="columnNameA" text="Jogador"/>
+            <TableColumn fx:id="columnPositionA" text="Posição"/>
+            <TableColumn fx:id="columnOverallA" text="Força"/>
+            <TableColumn fx:id="columnAmountA" text="Valor de mercado"/>
+        </columns>
+    </TableView>
+    <TableView fx:id="tableviewTeamB" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+        <columns>
+            <TableColumn fx:id="columnIdB" text="#"/>
+            <TableColumn fx:id="columnNameB" text="Jogador"/>
+            <TableColumn fx:id="columnPositionB" text="Posição"/>
+            <TableColumn fx:id="columnOverallB" text="Força"/>
+            <TableColumn fx:id="columnAmountB" text="Valor de mercado"/>
+        </columns>
+    </TableView>
+
+</AnchorPane>

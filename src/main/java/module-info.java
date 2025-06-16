@@ -1,4 +1,7 @@
 module org.example.myfootball {
+    opens org.example.myfootball.models to javafx.base;
+
+
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -13,4 +16,7 @@ module org.example.myfootball {
 
     opens org.example.myfootball to javafx.fxml;
     exports org.example.myfootball;
+    exports org.example.myfootball.controller;
+    opens org.example.myfootball.controller to javafx.fxml;
+
 }

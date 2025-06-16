@@ -1,25 +1,37 @@
 package org.example.myfootball.models;
 
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.*;
 
 public class Player {
 
+
+    private final SimpleIntegerProperty id;
     private final SimpleStringProperty name;
     private final SimpleStringProperty position;
-    private final SimpleIntegerProperty power;
+    private final SimpleIntegerProperty overall;
+    private final SimpleDoubleProperty amout;
 
-    public Player(String name, String position, int power) {
+    public Player(Integer id, String name, String position, Integer overall, Double amout) {
+        this.id = new SimpleIntegerProperty(id);
         this.name = new SimpleStringProperty(name);
         this.position = new SimpleStringProperty(position);
-        this.power = new SimpleIntegerProperty(power);
+        this.overall = new SimpleIntegerProperty(overall);
+        this.amout = new SimpleDoubleProperty(amout);
+    }
+
+    public int getId() {
+        return id.get();
+    }
+
+    public IntegerProperty idProperty() {
+        return id;
     }
 
     public String getName() {
         return name.get();
     }
 
-    public SimpleStringProperty nameProperty() {
+    public StringProperty nameProperty() {
         return name;
     }
 
@@ -27,15 +39,23 @@ public class Player {
         return position.get();
     }
 
-    public SimpleStringProperty positionProperty() {
+    public StringProperty positionProperty() {
         return position;
     }
 
-    public int getPower() {
-        return power.get();
+    public int getOverall() {
+        return overall.get();
     }
 
-    public SimpleIntegerProperty powerProperty() {
-        return power;
+    public IntegerProperty overallProperty() {
+        return overall;
+    }
+
+    public double getAmout() {
+        return amout.get();
+    }
+
+    public DoubleProperty amoutProperty() {
+        return amout;
     }
 }

@@ -6,19 +6,16 @@ import javafx.collections.FXCollections;
 
 public class Team {
 
-    private final SimpleStringProperty name;
-    private final ObservableList <Player> players;
+    private String name;
+    private final ObservableList <Player> players = FXCollections.observableArrayList();
 
     public Team(String name) {
-        this.name = new SimpleStringProperty(name);
-        this.players = FXCollections.observableArrayList();
+        this.name = name;
     }
     //GETTERS
-    public String getName() {
-        return name.get();
-    }
 
-    public SimpleStringProperty nameProperty() {
+
+    public String getName() {
         return name;
     }
 
