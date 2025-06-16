@@ -64,7 +64,13 @@ public class MainController {
         columnOverallB.setCellValueFactory(cell -> cell.getValue().overallProperty().asObject());
         columnAmountB.setCellValueFactory(cell -> cell.getValue().amoutProperty().asObject());
 
+        tableTimeA.setItems(teamA.getPlayers());
+        tableTimeB.setItems(teamB.getPlayers());
+
         teamA.addPlayer(new Player(1, "Joao", "MeioA",10,100000.00));
+        teamB.addPlayer(new Player(1, "Joao", "MeioA",10,100000.00));
+
+
     }
 
 }
